@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>prp00-web-java-client-native</module>
+        <module>prp00-web-java-client-library</module>
         <module>prp01-web-spring-rest</module>
         <module>prp02-web-quarkus-rest</module>
         <module>prp03-web-jaxrs-rest</module>
