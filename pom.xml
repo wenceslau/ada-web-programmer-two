@@ -14,6 +14,7 @@
         <module>prp03-web-jaxrs-rest</module>
         <module>prp04-web-spring-mvc</module>
         <module>prp05-web-spring-data</module>
+        <module>prp06-web-quarkus-panache</module>
     </modules>
 
     <properties>
