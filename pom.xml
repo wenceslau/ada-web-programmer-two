@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>prp01-web-spring-rest</module>
+        <module>prp02-web-quarkus-rest</module>
     </modules>
 
     <properties>
