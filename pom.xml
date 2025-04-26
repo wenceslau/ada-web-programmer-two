@@ -13,6 +13,7 @@
         <module>prp02-web-quarkus-rest</module>
         <module>prp03-web-jaxrs-rest</module>
         <module>prp04-web-spring-mvc</module>
+        <module>prp05-web-spring-data</module>
     </modules>
 
     <properties>
