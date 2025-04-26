@@ -21,6 +21,8 @@
         <module>prp08-web-spring-data-v2</module>
         <module>prp09-web-quarkus-panache-v2</module>
         <module>prp10-web-spring-data-v3</module>
+        <module>prp11-web-spring-validation</module>
+        <module>prp12-web-spring-advice</module>
     </modules>
 
     <properties>
