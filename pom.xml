@@ -23,6 +23,8 @@
         <module>prp10-web-spring-data-v3</module>
         <module>prp11-web-spring-validation</module>
         <module>prp12-web-spring-advice</module>
+        <module>prp13-web-spring-context</module>
+        <module>prp14-web-spring-cache</module>
     </modules>
 
     <properties>
