@@ -16,6 +16,7 @@
         <module>prp05-web-spring-data</module>
         <module>prp06-web-quarkus-panache</module>
         <module>prp07-web-spring-hibernate</module>
+        <module>prp08-web-spring-data-v2</module>
     </modules>
 
     <properties>
