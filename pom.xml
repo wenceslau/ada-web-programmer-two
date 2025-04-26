@@ -11,6 +11,7 @@
     <modules>
         <module>prp01-web-spring-rest</module>
         <module>prp02-web-quarkus-rest</module>
+        <module>prp03-web-jaxrs-rest</module>
     </modules>
 
     <properties>
