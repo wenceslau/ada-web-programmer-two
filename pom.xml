@@ -8,6 +8,7 @@
     <artifactId>ada-web-programmer-two</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>prp00-web-java-client-native</module>
         <module>prp00-web-java-client-library</module>
@@ -25,7 +26,7 @@
         <module>prp12-web-spring-advice</module>
         <module>prp13-web-spring-context</module>
         <module>prp14-web-spring-cache</module>
-        <module>prp10-web-spring-data4</module>
+        <module>prp11-web-spring-data4</module>
     </modules>
 
     <properties>

@@ -3,6 +3,7 @@ package br.com.ada.springdata2;
 import br.com.ada.springdata2.entities.Author;
 import br.com.ada.springdata2.entities.Book;
 import br.com.ada.springdata2.repositories.BookRepository;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +15,8 @@ public class Main {
     }
 
     @Bean
-    public Runnable run(BookRepository bookRepository) {
-        return () -> {
+    public ApplicationRunner run(BookRepository bookRepository) {
+        return (arguments) -> {
             System.out.println("Initializing database with sample data...");
 
             Author author1 = new Author("J.R.R. Tolkien", "jrr@email.com");
