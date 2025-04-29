@@ -55,7 +55,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                br.com.ada.Main
+                                br.com.ada.javaclientlibrary.Main
                             </mainClass>
                         </manifest>
                     </archive>

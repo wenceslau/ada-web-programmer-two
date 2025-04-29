@@ -18,13 +18,14 @@
         <module>prp05-web-spring-data</module>
         <module>prp06-web-quarkus-panache</module>
         <module>prp07-web-spring-hibernate</module>
-        <module>prp08-web-spring-data-v2</module>
-        <module>prp09-web-quarkus-panache-v2</module>
-        <module>prp10-web-spring-data-v3</module>
+        <module>prp08-web-spring-data2</module>
+        <module>prp09-web-quarkus-panache2</module>
+        <module>prp10-web-spring-data3</module>
         <module>prp11-web-spring-validation</module>
         <module>prp12-web-spring-advice</module>
         <module>prp13-web-spring-context</module>
         <module>prp14-web-spring-cache</module>
+        <module>prp10-web-spring-data4</module>
     </modules>
 
     <properties>
