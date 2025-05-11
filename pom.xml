@@ -10,6 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>ada-estacionamento-web-quarkus</module>
+        <module>ada-estacionamento-web-spring</module>
+        <module>ada-pedido-compra-quarkus</module>
+        <module>ada-pedido-compra-spring</module>
         <module>web-java-client-native</module>
         <module>web-java-client-library</module>
         <module>web-spring-rest</module>
