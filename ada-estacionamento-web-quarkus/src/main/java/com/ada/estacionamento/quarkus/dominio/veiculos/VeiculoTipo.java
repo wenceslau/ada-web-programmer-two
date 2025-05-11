@@ -1,7 +1,7 @@
-package com.ada.estacionamento.dominio.veiculos;
+package com.ada.estacionamento.quarkus.dominio.veiculos;
 
 
-import com.ada.estacionamento.dominio.Veiculo;
+import com.ada.estacionamento.quarkus.dominio.Veiculo;
 
 import java.util.Arrays;
 

@@ -1,32 +1,32 @@
-package com.ada.pedidocompra.dominio.servicos;
+package com.ada.pedidocompra.quarkus.dominio.servicos;
 
-import com.ada.pedidocompra.dominio.servicos.pedido.ProcessarPedidoService;
-import com.ada.pedidocompra.infraestrutura.configuracao.seguranca.jwt.JWTService;
-import com.ada.pedidocompra.infraestrutura.controladores.request.CreatePedidoRequest;
-import com.ada.pedidocompra.infraestrutura.controladores.request.ItemPedidoRequest;
-import com.ada.pedidocompra.infraestrutura.controladores.response.IdResponse;
-import com.ada.pedidocompra.infraestrutura.configuracao.exceptions.NegocioException;
-import com.ada.pedidocompra.infraestrutura.repositorios.ProdutoRepository;
-import com.ada.pedidocompra.infraestrutura.repositorios.UsuarioRepository;
-import com.ada.pedidocompra.infraestrutura.repositorios.entidades.ItemPedido;
-import com.ada.pedidocompra.infraestrutura.repositorios.entidades.Pedido;
-import com.ada.pedidocompra.infraestrutura.repositorios.entidades.enums.StatusPedidoEnum;
-import org.springframework.stereotype.Service;
+import com.ada.pedidocompra.quarkus.dominio.servicos.pedido.ProcessarPedidoService;
+import com.ada.pedidocompra.quarkus.infraestrutura.configuracao.exceptions.NegocioException;
+import com.ada.pedidocompra.quarkus.infraestrutura.controladores.request.CreatePedidoRequest;
+import com.ada.pedidocompra.quarkus.infraestrutura.controladores.request.ItemPedidoRequest;
+import com.ada.pedidocompra.quarkus.infraestrutura.controladores.response.IdResponse;
+import com.ada.pedidocompra.quarkus.infraestrutura.repositorios.ProdutoRepository;
+import com.ada.pedidocompra.quarkus.infraestrutura.repositorios.UsuarioRepository;
+import com.ada.pedidocompra.quarkus.infraestrutura.repositorios.entidades.ItemPedido;
+import com.ada.pedidocompra.quarkus.infraestrutura.repositorios.entidades.Pedido;
+import com.ada.pedidocompra.quarkus.infraestrutura.repositorios.entidades.enums.StatusPedidoEnum;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Instance;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Service
+@ApplicationScoped
 public class PedidoService {
 
     private final ProdutoRepository produtoRepository;
     private final UsuarioRepository usuarioRepository;
-    private final List<ProcessarPedidoService> processarPedidoServiceList;
+    private final Instance<ProcessarPedidoService> processarPedidoServiceList;
 
     public PedidoService(ProdutoRepository produtoRepository,
                          UsuarioRepository usuarioRepository,
-                         List<ProcessarPedidoService> processarPedidoServiceList) {
+                         Instance<ProcessarPedidoService> processarPedidoServiceList
+    ) {
 
         this.produtoRepository = produtoRepository;
         this.usuarioRepository = usuarioRepository;
@@ -36,7 +36,7 @@ public class PedidoService {
 
     public IdResponse create(CreatePedidoRequest createPedidoRequest) {
 
-        var clienteEmail = JWTService.getUserContext();
+        var clienteEmail = "mclogsistemas@gmail.com";// JWTService.getUserContext();
         var usuario = usuarioRepository
                 .findByEmail(clienteEmail)
                 .orElseThrow(() -> new NegocioException("Usuário não encontrado! Email: " + clienteEmail));
@@ -68,7 +68,7 @@ public class PedidoService {
     private ItemPedido criarItemPedido(ItemPedidoRequest itemPedidoRequest, Pedido pedido) {
 
         var produto = produtoRepository
-                .findById(itemPedidoRequest.produtoId())
+                .findByIdOptional(itemPedidoRequest.produtoId())
                 .orElseThrow(() -> new NegocioException("Produto nao encontrado! Id: " + itemPedidoRequest.produtoId()));
 
         var itemPedido = new ItemPedido();

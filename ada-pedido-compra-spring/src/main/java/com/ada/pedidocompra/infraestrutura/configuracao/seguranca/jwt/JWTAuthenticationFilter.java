@@ -5,7 +5,6 @@ import com.ada.pedidocompra.infraestrutura.configuracao.seguranca.UserContext;
 import com.ada.pedidocompra.infraestrutura.configuracao.seguranca.LoginRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;
